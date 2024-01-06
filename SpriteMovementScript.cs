@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour{
     private SpriteRenderer spriteRenderer;
     void Start(){
-
     }
-
     void Update(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         Vector3 spritePosition = transform.position;
