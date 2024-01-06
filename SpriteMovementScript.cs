@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
-    int i = 0;
     private SpriteRenderer spriteRenderer;
     void Start(){
 
