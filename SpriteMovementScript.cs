@@ -3,30 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
-    private SpriteRenderer spriteRenderer;
-    void Start(){
-    }
-    void Update(){
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        Vector3 spritePosition = transform.position;
+    int i = 0;
+    private Rigidbody2D rigidbody;
 
-        if (Input.GetKey("w") && spritePosition[1] < -2)
-        {
-            Debug.Log("Jump");
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, 14, 0);
+    private void Start(){
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update(){
+        float HorizontalMovement = Input.GetAxisRaw("Horizontal");
+        rigidbody.velocity = new Vector2(7f * HorizontalMovement, rigidbody.velocity.y);
+
+        if (Input.GetButton("Jump")){
+           rigidbody.velocity = new Vector2(rigidbody.velocity.x , 14f);
         }
-        if (Input.GetKey("a")){
-            Debug.Log("Left");
-            GetComponent<Rigidbody2D>().velocity = new Vector3(-2, 0, 0);
-        }
-        if (Input.GetKey("d")){
-            Debug.Log("Right");
-            GetComponent<Rigidbody2D>().velocity = new Vector3(2, 0, 0);
-        }
-        if (Input.GetKey("f")){
-            Debug.Log("Dash");
-            GetComponent<Rigidbody2D>().velocity = new Vector3(10, 0, 0);
-        }
+        
 
     }
 }
