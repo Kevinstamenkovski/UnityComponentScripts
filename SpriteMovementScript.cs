@@ -17,7 +17,10 @@ public class PlayerMovement : MonoBehaviour{
         if (Input.GetButton("Jump")){
            rigidbody.velocity = new Vector2(rigidbody.velocity.x , 14f);
         }
-        
+
+        if (Input.GetKeyDown("f")){
+            rigidbody.velocity = new Vector2(14f * HorizontalMovement, rigidbody.velocity.y);
+        }
 
     }
 }
