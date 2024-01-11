@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
-    int i = 0;
+
     private Rigidbody2D rigidbody;
     private Animator animation;
     private float HorizontalMovement = 0f;
     private SpriteRenderer sprite;
+    private Vector2 spawnPosition = new Vector2(-16.25f, -6.5f);
+    [SerializeField] private float JumpForce = 14f;
+    [SerializeField] private float MoveSpeed = 7f;
 
     private void Start(){
         rigidbody = GetComponent<Rigidbody2D>();
@@ -17,14 +20,14 @@ public class PlayerMovement : MonoBehaviour{
 
     private void Update(){
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
-        rigidbody.velocity = new Vector2(7f * HorizontalMovement, rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(MoveSpeed * HorizontalMovement, rigidbody.velocity.y);
 
         if (Input.GetButtonDown("Jump")){
-           rigidbody.velocity = new Vector2(rigidbody.velocity.x , 14f);
+           rigidbody.velocity = new Vector2(rigidbody.velocity.x , JumpForce);
         }
 
         if (rigidbody.position.y < -20) {
-            rigidbody.position = new Vector2(-16.25f, -6.5f);
+            rigidbody.position = spawnPosition;
             Debug.Log(rigidbody.velocity.y);
         }
 
