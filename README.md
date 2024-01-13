@@ -3,3 +3,4 @@ This Repo has some of the components/Scripts I create with C# to be used in Unit
 * **Player Movement Script**
 * **Collision Detector Script**
 * **Camera Controller Script**
+* **Player Rotation Script**
