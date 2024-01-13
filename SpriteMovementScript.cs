@@ -26,14 +26,16 @@ public class PlayerMovement : MonoBehaviour{
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    private void Update(){
+    private void Update() {
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
         rigidbody.velocity = new Vector2(MoveSpeed * HorizontalMovement, rigidbody.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && isGrounded()){
-           rigidbody.velocity = new Vector2(rigidbody.velocity.x , JumpForce);
+        if (Input.GetButton("Jump") && isGrounded()) {
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, JumpForce);
         }
-
+        if (Input.GetKey("f")){
+            rigidbody.position = new Vector2(rigidbody.position.x + HorizontalMovement/10, rigidbody.position.y);
+        }
         if (rigidbody.position.y < -20) {
             rigidbody.position = spawnPosition;
             Debug.Log(rigidbody.velocity.y);
