@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
-
+    
     [SerializeField] private LayerMask JumpableGround;
     private BoxCollider2D collider2D;
     private Rigidbody2D rigidbody;
@@ -13,12 +13,9 @@ public class PlayerMovement : MonoBehaviour{
     private Vector2 spawnPosition = new Vector2(-16.25f, -6.5f);
     [SerializeField] private float JumpForce = 14f;
     [SerializeField] private float MoveSpeed = 7f;
-
     private enum MovementState { idle, running, falling, jumping }
-
     private MovementState state = MovementState.idle;
-
-
+    
     private void Start(){
         rigidbody = GetComponent<Rigidbody2D>();
         animation = GetComponent<Animator>();
@@ -40,14 +37,12 @@ public class PlayerMovement : MonoBehaviour{
             rigidbody.position = spawnPosition;
             Debug.Log(rigidbody.velocity.y);
         }
-
         updateAnimations();
     }
 
     void updateAnimations(){
 
         MovementState state;
-
         if (HorizontalMovement > 0f){
             state = MovementState.running;
             sprite.flipX = false;
@@ -57,13 +52,11 @@ public class PlayerMovement : MonoBehaviour{
         }else{
             state = MovementState.idle;
         }
-
         if(rigidbody.velocity.y > .1f){
             state = MovementState.jumping;
         }else if(rigidbody.velocity.y < -.1f){
             state = MovementState.falling;
         }
-
         animation.SetInteger("state", (int)state);
     }
 
