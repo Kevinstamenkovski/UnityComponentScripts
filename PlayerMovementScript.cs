@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour{
     private void Update() {
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
         rigidbody.velocity = new Vector2(MoveSpeed * HorizontalMovement, rigidbody.velocity.y);
-
         if (Input.GetButton("Jump") && isGrounded()) {
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, JumpForce);
         }
@@ -40,7 +39,6 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     void updateAnimations(){
-
         MovementState state;
         if (HorizontalMovement > 0f){
             state = MovementState.running;
@@ -50,8 +48,7 @@ public class PlayerMovement : MonoBehaviour{
             sprite.flipX = true;
         }else{
             state = MovementState.idle;
-        }
-        if(rigidbody.velocity.y > .1f){
+        }if(rigidbody.velocity.y > .1f){
             state = MovementState.jumping;
         }else if(rigidbody.velocity.y < -.1f){
             state = MovementState.falling;
