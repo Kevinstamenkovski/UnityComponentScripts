@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour{
         }
         updateAnimations();
     }
-
     void updateAnimations(){
         MovementState state;
         if (HorizontalMovement > 0f){
