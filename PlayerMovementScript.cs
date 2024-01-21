@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerMovement : MonoBehaviour{
     [SerializeField] private LayerMask JumpableGround;
     private BoxCollider2D collider2D;
