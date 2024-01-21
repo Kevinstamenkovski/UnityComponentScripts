@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour{
         collider2D = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
     }
-
     private void Update() {
         HorizontalMovement = Input.GetAxisRaw("Horizontal");
         rigidbody.velocity = new Vector2(MoveSpeed * HorizontalMovement, rigidbody.velocity.y);
