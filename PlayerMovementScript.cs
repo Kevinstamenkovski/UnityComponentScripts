@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour{
     [SerializeField] private float MoveSpeed = 7f;
     private enum MovementState { idle, running, falling, jumping }
     private MovementState state = MovementState.idle;
-    
     private void Start(){
         rigidbody = GetComponent<Rigidbody2D>();
         animation = GetComponent<Animator>();
