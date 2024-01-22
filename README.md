@@ -4,3 +4,4 @@
 * **Player Rotation Script**
 * **Player Life Script**
 * **Collecting Items Script**
+* **Platform Movement Script**
