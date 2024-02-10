@@ -15,6 +15,7 @@ public class PlayerLife : MonoBehaviour{
             Death();
         }    
     }
+    
     private void Death(){
         rigidbody.bodyType = RigidbodyType2D.Static;
         animator.SetTrigger("death");
