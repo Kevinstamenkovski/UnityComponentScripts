@@ -6,7 +6,6 @@ public class FallDeathScript : MonoBehaviour{
   private Rigidbody2D rigidbody;
   [SerializeField] private int fallLimit = -20;
   private Vector2 spawnPosition = new Vector2(-16.25f, -6.5f);
-
   private void Start(){
         rigidbody = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<BoxCollider2D>();
