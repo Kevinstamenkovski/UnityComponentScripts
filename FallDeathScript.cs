@@ -8,6 +8,7 @@ public class FallDeathScript : MonoBehaviour{
   private Vector2 spawnPosition = new Vector2(-16.25f, -6.5f);
   private void Start(){
         rigidbody = GetComponent<Rigidbody2D>();
+  
         collider2D = GetComponent<BoxCollider2D>();
     }
   private void Update(){
