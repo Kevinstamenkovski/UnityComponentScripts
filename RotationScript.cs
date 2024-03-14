@@ -10,4 +10,5 @@ public class RotationScript : MonoBehaviour{
             transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
     }
+    
 }
