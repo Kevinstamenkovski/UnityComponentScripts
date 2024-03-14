@@ -6,7 +6,6 @@ public class RotationScript : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.Space)){
             isRotating = !isRotating;
         }
-        
         if (isRotating){
             transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
