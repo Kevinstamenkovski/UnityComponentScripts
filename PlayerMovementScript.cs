@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour{
 
     private BoxCollider2D collider2D;
     private Rigidbody2D rigidbody;
-
     private Animator animation;
     private float HorizontalMovement = 0f;
     private SpriteRenderer sprite;
