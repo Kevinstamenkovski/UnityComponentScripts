@@ -12,7 +12,6 @@ public class MovingPlatform : MonoBehaviour
     void Update(){
         float newPosition = Mathf.PingPong(Time.time * speed, distance);
         Vector3 targetPosition = initialPosition + Vector3.right * newPosition * direction;
-
         transform.position = targetPosition;
     }
 }
