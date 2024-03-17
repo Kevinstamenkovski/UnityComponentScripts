@@ -4,7 +4,6 @@ public class MovingPlatform : MonoBehaviour
 {
     public float speed = 5f;
     public float distance = 5f;
-
     private Vector3 initialPosition;
     private float direction = 1;  
 
