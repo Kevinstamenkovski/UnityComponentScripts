@@ -6,7 +6,6 @@ public class MovingPlatform : MonoBehaviour
     public float distance = 5f;
     private Vector3 initialPosition;
     private float direction = 1;  
-
     void Start(){
         initialPosition = transform.position;
     }
