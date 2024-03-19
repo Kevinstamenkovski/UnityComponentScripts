@@ -10,7 +10,6 @@ public class PlayerLife : MonoBehaviour{
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
-
     private void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.CompareTag("Trap")){
             Death();
