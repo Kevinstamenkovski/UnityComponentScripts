@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
 public class TerrainCollisionDetection : MonoBehaviour{
     [SerializeField] private string terrainTag = "Terrain";
     private void OnCollisionEnter(Collision collision){
