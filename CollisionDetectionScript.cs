@@ -15,4 +15,5 @@ public class TerrainCollisionDetection : MonoBehaviour{
         Debug.Log("Collided with terrain: " + terrainObject.name);
         gameObject.SetActive(false);
     }
+    
 }
