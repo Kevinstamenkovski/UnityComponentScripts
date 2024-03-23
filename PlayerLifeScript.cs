@@ -19,7 +19,6 @@ public class PlayerLife : MonoBehaviour{
         rigidbody.bodyType = RigidbodyType2D.Static;
         animator.SetTrigger("death");
     }
-    
     private void RestartLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
