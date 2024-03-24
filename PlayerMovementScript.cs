@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour{
         }else if(rigidbody.velocity.y < -.1f){
             state = MovementState.falling;
         }
+        
         animation.SetInteger("state", (int)state);
     }
     private bool isGrounded() {
