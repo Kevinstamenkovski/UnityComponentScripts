@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class RotationScript : MonoBehaviour{
     public float rotationSpeed = 50f;
     private bool isRotating = true;
