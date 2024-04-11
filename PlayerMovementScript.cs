@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour{
     private Rigidbody2D rigidbody;
     private Animator animation;
     private float HorizontalMovement = 0f;
-
     private SpriteRenderer sprite;
     private Vector2 spawnPosition = new Vector2(-16.25f, -6.5f);
     [SerializeField] private float JumpForce = 14f;
