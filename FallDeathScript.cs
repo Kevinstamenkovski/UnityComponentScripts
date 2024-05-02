@@ -9,6 +9,7 @@ public class FallDeathScript : MonoBehaviour{
   private void Start(){
         rigidbody = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<BoxCollider2D>();
+    
     }
   
   private void Update(){
