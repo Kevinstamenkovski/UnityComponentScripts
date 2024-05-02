@@ -10,6 +10,7 @@ public class FallDeathScript : MonoBehaviour{
         rigidbody = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<BoxCollider2D>();
     }
+  
   private void Update(){
     if (rigidbody.position.y < fallLimit) {
       rigidbody.position = spawnPosition;
