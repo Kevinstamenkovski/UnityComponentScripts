@@ -6,6 +6,7 @@ public class TerrainCollisionDetection : MonoBehaviour{
     private void OnCollisionEnter(Collision collision){
         CheckTerrainCollision(collision);
     }
+    
     private void CheckTerrainCollision(Collision collision){
         if (collision != null && collision.gameObject.CompareTag(terrainTag)){
             HandleTerrainCollision(collision.gameObject);
