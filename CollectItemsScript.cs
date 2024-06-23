@@ -12,6 +12,6 @@ public class ItemCollector : MonoBehaviour{
             cherriesText.text = "Cherries: " + cherries;
         }
     } 
-}  
+}   
 
  
