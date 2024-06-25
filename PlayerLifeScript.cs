@@ -20,6 +20,6 @@ public class PlayerLife : MonoBehaviour{
         animator.SetTrigger("death");
     }
     private void RestartLevel(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
